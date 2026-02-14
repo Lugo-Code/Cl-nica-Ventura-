@@ -1,236 +1,167 @@
- <!DOCTYPE html>
- <html lang="es">
- <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Clínica Veterinaria Ventura</title>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Ventura - Cuidado Veterinario de Primera</title>
+    <meta name="description" content="Clínica veterinaria en Lugo: consultas, vacunas, emergencias. Atención profesional para tu mascota. Agenda cita ahora.">
+    <meta name="keywords" content="clínica veterinaria Lugo, cuidado mascotas, veterinario, vacunas, emergencias">
+    <link rel="icon" href="favicon.ico"> <!-- Agrega un favicon si tienes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Iconos -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { line-height: 1.6; color: #333; background: #f4f4f4; }
+        header { position: fixed; top: 0; width: 100%; background: #28a745; color: white; padding: 1rem; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        nav ul { list-style: none; display: flex; }
+        nav li { margin: 0 1rem; }
+        nav a { color: white; text-decoration: none; font-weight: 700; }
+        .cta-nav { background: #fff; color: #28a745; padding: 0.5rem 1rem; border-radius: 5px; font-weight: 700; text-decoration: none; }
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 5rem 2rem 2rem; background: linear-gradient(135deg, #28a745, #20c997); color: white; min-height: 80vh; }
+        .hero-content { flex: 1; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+        .cta-button { background: #fff; color: #28a745; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: 700; display: inline-block; transition: 0.3s; }
+        .cta-button:hover { background: #e9ecef; transform: scale(1.05); }
+        .urgency { background: #ff6b6b; padding: 0.5rem; border-radius: 5px; margin-top: 1rem; font-weight: 700; }
+        .hero-image img { max-width: 100%; border-radius: 10px; }
+        section { padding: 4rem 2rem; text-align: center; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0; }
+        .service { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: 0.3s; }
+        .service:hover { transform: translateY(-5px); }
+        .service i { font-size: 3rem; color: #28a745; margin-bottom: 1rem; }
+        .price { color: #28a745; font-weight: 700; font-size: 1.2rem; }
+        .testimonials { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .testimonial { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 300px; }
+        .testimonial img { border-radius: 50%; width: 50px; height: 50px; margin-top: 1rem; }
+        form { max-width: 600px; margin: 0 auto; display: grid; gap: 1rem; }
+        input, textarea { padding: 1rem; border: 1px solid #ddd; border-radius: 5px; }
+        .contact-info { margin-top: 2rem; }
+        footer { background: #333; color: white; text-align: center; padding: 1rem; }
+        .social a { color: white; margin: 0 0.5rem; font-size: 1.5rem; }
+        /* Responsive */
+        @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } nav ul { display: none; } .services-grid { grid-template-columns: 1fr; } .testimonials { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Clínica Ventura</div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="https://wa.me/1234567890?text=Hola,%20quiero%20agendar%20una%20cita" class="cta-nav" target="_blank">Agenda Cita <i class="fab fa-whatsapp"></i></a>
+        </nav>
+    </header>
 
- <style>
- :root {
-   --primary: #6b1fa7;
-     --secondary: #f3e9ff;
-       --dark: #2b2b2b;
-       }
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Cuidado Veterinario que Salva Vidas</h1>
+            <p>En Clínica Ventura, tu mascota es familia. Consultas, vacunas y emergencias 24/7. ¡Primera consulta gratis esta semana!</p>
+            <a href="#contacto" class="cta-button">Agenda Ahora</a>
+            <div class="urgency">¡Oferta limitada: Solo 5 cupos disponibles!</div>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/600x400?text=Perro+Feliz" alt="Mascota feliz en la clínica"> <!-- Reemplaza con tu imagen real -->
+        </div>
+    </section>
 
-       * {
-         margin: 0;
-           padding: 0;
-             box-sizing: border-box;
-               font-family: 'Poppins', sans-serif;
-               }
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service">
+                <i class="fas fa-stethoscope"></i>
+                <h3>Consultas Generales</h3>
+                <p>Chequeos completos para detectar problemas a tiempo.</p>
+                <span class="price">Desde $20</span>
+            </div>
+            <div class="service">
+                <i class="fas fa-syringe"></i>
+                <h3>Vacunas y Desparasitación</h3>
+                <p>Protege a tu mascota contra enfermedades.</p>
+                <span class="price">Desde $15</span>
+            </div>
+            <div class="service">
+                <i class="fas fa-ambulance"></i>
+                <h3>Emergencias 24/7</h3>
+                <p>Atención inmediata cuando más lo necesitas.</p>
+                <span class="price">Consulta gratis</span>
+            </div>
+        </div>
+        <a href="#contacto" class="cta-button">Cotiza tu Servicio</a>
+    </section>
 
-               body {
-                 background: #f7f7fb;
-                   color: var(--dark);
-                   }
+    <section id="testimonios">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"Salvaron a mi gato en una emergencia. ¡Profesionales de 10!"</p>
+                <cite>- Ana López</cite>
+                <img src="https://via.placeholder.com/100?text=Cliente" alt="Cliente satisfecho">
+            </div>
+            <div class="testimonial">
+                <p>"Vacunas rápidas y sin dolor. Recomiendo 100%."</p>
+                <cite>- Carlos Ruiz</cite>
+                <img src="https://via.placeholder.com/100?text=Cliente" alt="Cliente satisfecho">
+            </div>
+        </div>
+    </section>
 
-                   /* HEADER */
-                   .header {
-                     background: linear-gradient(rgba(45,0,80,.85), rgba(45,0,80,.85)),
-                       url("https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=1400&q=80") center/cover;
-                         padding: 90px 20px;
-                           text-align: center;
-                             color: white;
-                             }
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Reemplaza 'your-form-id' con tu ID real de Formspree -->
+            <input type="text" name="name" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Email" required>
+            <textarea name="message" placeholder="Describe tu consulta" required></textarea>
+            <button type="submit" class="cta-button">Enviar Mensaje</button>
+        </form>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +34 123 456 789</p>
+            <p><i class="fas fa-envelope"></i> info@clinicaventura.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Calle Ficticia 123, Lugo</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d-7.55!3d43.01!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDA2JzAwLjAiTiA3wrAzMycwMC4wIlc!5e0!3m2!1ses!2ses!4v1234567890123!5m2!1ses!2ses" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> <!-- Reemplaza con tu ubicación real -->
+        </div>
+    </section>
 
-                             .header h1 {
-                               font-size: 2.6rem;
-                                 margin-bottom: 15px;
-                                 }
+    <footer>
+        <p>&copy; 2023 Clínica Ventura. Todos los derechos reservados.</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
 
-                                 .header p {
-                                   font-size: 1.15rem;
-                                     margin-bottom: 30px;
-                                       opacity: 0.95;
-                                       }
+    <script>
+        // Animaciones suaves al scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
 
-                                       .nav-buttons button {
-                                         background: white;
-                                           color: var(--primary);
-                                             border: none;
-                                               padding: 14px 32px;
-                                                 border-radius: 40px;
-                                                   font-weight: bold;
-                                                     margin: 8px;
-                                                       cursor: pointer;
-                                                         transition: 0.3s;
-                                                         }
+        // Inicializar opacidad
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.5s, transform 0.5s';
+        });
 
-                                                         .nav-buttons button:hover {
-                                                           transform: translateY(-3px);
-                                                           }
-
-                                                           /* SECTIONS */
-                                                           .section {
-                                                             display: none;
-                                                               padding: 80px 20px;
-                                                                 animation: fade 0.4s ease;
-                                                                 }
-
-                                                                 .section.active {
-                                                                   display: block;
-                                                                   }
-
-                                                                   @keyframes fade {
-                                                                     from {opacity: 0; transform: translateY(20px);}
-                                                                       to {opacity: 1; transform: translateY(0);}
-                                                                       }
-
-                                                                       .section h2 {
-                                                                         text-align: center;
-                                                                           color: var(--primary);
-                                                                             font-size: 2.2rem;
-                                                                               margin-bottom: 40px;
-                                                                               }
-
-                                                                               /* CARDS */
-                                                                               .cards {
-                                                                                 max-width: 1100px;
-                                                                                   margin: auto;
-                                                                                     display: grid;
-                                                                                       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-                                                                                         gap: 25px;
-                                                                                         }
-
-                                                                                         .card {
-                                                                                           background: white;
-                                                                                             border-radius: 22px;
-                                                                                               padding: 25px;
-                                                                                                 text-align: center;
-                                                                                                   box-shadow: 0 15px 35px rgba(0,0,0,.08);
-                                                                                                   }
-
-                                                                                                   .card img {
-                                                                                                     width: 100%;
-                                                                                                       border-radius: 16px;
-                                                                                                         margin-bottom: 15px;
-                                                                                                         }
-                                                                                                         .img-destacada {
-                                                                                                           width: 80%;
-                                                                                                             max-width: 420px;
-                                                                                                               display: block;
-                                                                                                                 margin: 20px auto;
-                                                                                                                   border-radius: 18px;
-                                                                                                                     box-shadow: 0 15px 35px rgba(0,0,0,.25);
-                                                                                                                     }
-
-                                                                                                                     .card h3 {
-                                                                                                                       color: var(--primary);
-                                                                                                                         margin-bottom: 10px;
-                                                                                                                         }
-
-                                                                                                                         /* CONTACT */
-                                                                                                                         .contact-buttons a {
-                                                                                                                           display: block;
-                                                                                                                             max-width: 340px;
-                                                                                                                               margin: 14px auto;
-                                                                                                                                 padding: 16px;
-                                                                                                                                   border-radius: 50px;
-                                                                                                                                     background: var(--primary);
-                                                                                                                                       color: white;
-                                                                                                                                         text-decoration: none;
-                                                                                                                                           font-weight: bold;
-                                                                                                                                             font-size: 1.05rem;
-                                                                                                                                             }
-
-                                                                                                                                             /* FOOTER */
-                                                                                                                                             footer {
-                                                                                                                                               background: #2b003d;
-                                                                                                                                                 color: white;
-                                                                                                                                                   text-align: center;
-                                                                                                                                                     padding: 20px;
-                                                                                                                                                       font-size: 0.9rem;
-                                                                                                                                                       }
-                                                                                                                                                       </style>
-                                                                                                                                                       </head>
-
-                                                                                                                                                       <body>
-
-                                                                                                                                                       <!-- HEADER -->
-                                                                                                                                                       <div class="header">
-                                                                                                                                                         <h1>Clínica Veterinaria Ventura</h1>
-                                                                                                                                                           <p>Cuidamos a tu mascota como parte de nuestra familia 🐾</p>
-
-                                                                                                                                                             <div class="nav-buttons">
-                                                                                                                                                                 <button onclick="mostrar('porque')">¿Por qué elegirnos?</button>
-                                                                                                                                                                     <button onclick="mostrar('servicios')">Servicios</button>
-                                                                                                                                                                         <button onclick="mostrar('contacto')">Contacto</button>
-                                                                                                                                                                           </div>
-                                                                                                                                                                           </div>
-
-                                                                                                                                                                           <!-- POR QUÉ -->
-                                                                                                                                                                           <section id="porque" class="section active">
-                                                                                                                                                                             <h2>¿Por qué elegirnos?</h2>
-
-                                                                                                                                                                               <div class="cards">
-                                                                                                                                                                                   <div class="card">
-                                                                                                                                                                                         <a href="https://ibb.co/8Df47bHG"><img src="https://i.ibb.co/rGzfw3Vq/veterinariaventurard-20260101-1.jpg" alt="veterinariaventurard-20260101-1" border="0"></a>
-                                                                                                                                                                                               <h3>🐾 Más que una veterinaria, una familia</h3>
-                                                                                                                                                                                                     <p>Sabemos lo que significa amar a una mascota.
-                                                                                                                                                                                                     Por eso cada atención la hacemos con respeto, cariño y dedicación, como si fuera parte de nuestro hogar.</p>
-                                                                                                                                                                                                         </div>
-                                                                                                                                                                                                         <a href="https://ibb.co/k2WpgC1D">
-                                                                                                                                                                                                           <img src="https://i.ibb.co/5hfdWHFj/20260102-005645-COLLAGE.jpg" class="img-destacada">
-                                                                                                                                                                                                           </a>
-                                                                                                                                                                                                               <div class="card">
-                                                                                                                                                                                                                     <h3>💜 Porque aquí tu mascota importa de verdad</h3>
-                                                                                                                                                                                                                           <p>No vemos animales, vemos familia.
-                                                                                                                                                                                                                           Cada consulta, cada tratamiento y cada recomendación nace del amor, el respeto y la responsabilidad que sentimos por cada vida que llega a nuestras manos.</p>
-                                                                                                                                                                                                                               </div>
-
-                                                                                                                                                                                                                                   <div class="card">
-                                                                                                                                                                                                                                         <h3>Confianza y experiencia</h3>
-                                                                                                                                                                                                                                               <p>Porque tu tranquilidad y la salud de tu mascota son nuestra prioridad.</p>
-                                                                                                                                                                                                                                                   </div>
-                                                                                                                                                                                                                                                     </div>
-                                                                                                                                                                                                                                                     </section>
-
-                                                                                                                                                                                                                                                     <!-- SERVICIOS -->
-                                                                                                                                                                                                                                                     <section id="servicios" class="section">
-                                                                                                                                                                                                                                                       <h2>Servicios</h2>
-
-                                                                                                                                                                                                                                                         <div class="cards">
-                                                                                                                                                                                                                                                             <div class="card">🐶 Consultas Generales</div>
-                                                                                                                                                                                                                                                                 <div class="card">💉 Vacunación</div>
-                                                                                                                                                                                                                                                                     <div class="card">🧪 Laboratorio Clínico</div>
-                                                                                                                                                                                                                                                                         <div class="card">✂️ Peluquería Canina</div>
-                                                                                                                                                                                                                                                                             <div class="card">🩺 Especialidades</div>
-                                                                                                                                                                                                                                                                                 <div class="card">🛍️ Pet Shop</div>
-                                                                                                                                                                                                                                                                                   </div>
-                                                                                                                                                                                                                                                                                   </section>
-
-                                                                                                                                                                                                                                                                                   <!-- CONTACTO -->
-                                                                                                                                                                                                                                                                                   <section id="contacto" class="section">
-                                                                                                                                                                                                                                                                                     <h2>Contacto</h2>
-
-                                                                                                                                                                                                                                                                                       <div class="contact-buttons">
-                                                                                                                                                                                                                                                                                           <a href="https://wa.me/18495238412">💬 WhatsApp</a>
-                                                                                                                                                                                                                                                                                               <a href="tel:+18495238412">📞 Llamar</a>
-                                                                                                                                                                                                                                                                                                   <a href="https://www.instagram.com/veterinariaventurard">📸 Instagram</a>
-                                                                                                                                                                                                                                                                                                       <a href="https://maps.app.goo.gl/6auvaC5zhQMTmFJa9">📍 Ubicación</a>
-                                                                                                                                                                                                                                                                                                         </div>
-                                                                                                                                                                                                                                                                                                         </section>
-
-                                                                                                                                                                                                                                                                                                         <footer>
-                                                                                                                                                                                                                                                                                                           © 2026 Clínica Veterinaria Ventura — Todos los derechos reservados
-                                                                                                                                                                                                                                                                                                           </footer>
-
-                                                                                                                                                                                                                                                                                                           <script>
-                                                                                                                                                                                                                                                                                                           function mostrar(id) {
-                                                                                                                                                                                                                                                                                                             document.querySelectorAll('.section').forEach(sec => {
-                                                                                                                                                                                                                                                                                                                 sec.classList.remove('active');
-                                                                                                                                                                                                                                                                                                                   });
-
-                                                                                                                                                                                                                                                                                                                     const seccion = document.getElementById(id);
-                                                                                                                                                                                                                                                                                                                       seccion.classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                         // 🔥 Esto hace que baje automáticamente
-                                                                                                                                                                                                                                                                                                                           seccion.scrollIntoView({ 
-                                                                                                                                                                                                                                                                                                                               behavior: "smooth",
-                                                                                                                                                                                                                                                                                                                                   block: "start"
-                                                                                                                                                                                                                                                                                                                                     });
-                                                                                                                                                                                                                                                                                                                                     }
-                                                                                                                                                                                                                                                                                                                                     </script>
-
-                                                                                                                                                                                                                                                                                                                                     </body>
-                                                                                                                                                                                                                                                                                                                                     </html>
+        // Pop-up de urgencia (opcional, aparece después de 5s)
+        setTimeout(() => {
+            if (!localStorage.getItem('popupShown')) {
+                alert('¡Oferta especial: Primera consulta gratis! Agenda ahora.');
+                localStorage.setItem('popupShown', 'true');
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
